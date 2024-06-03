@@ -75,4 +75,19 @@ WHERE Professor.nome = 'Alexandre Zamberlan';
 SELECT COUNT(*) AS total_projetos 
 FROM Projeto;
 
-5. 
+SELECT titulo 
+FROM Projeto 
+WHERE colaborador_id IS NULL;
+
+SELECT Projeto.titulo 
+FROM Projeto 
+JOIN Professor ON Projeto.professor_responsavel_id = Professor.id 
+JOIN Curso ON Professor.curso_id = Curso.id 
+WHERE Curso.area = 'Tecnologia';
+
+SELECT Curso.nome AS curso, Projeto.titulo 
+FROM Projeto 
+JOIN Professor ON Projeto.professor_responsavel_id = Professor.id 
+JOIN Curso ON Professor.curso_id = Curso.id 
+ORDER BY Curso.nome;
+
