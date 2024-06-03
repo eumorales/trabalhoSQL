@@ -1,4 +1,4 @@
-# 📘 Trabalho Gilberto Morales & Rafael Predebon | 03.06.24 
+# 📘 Trabalho - Gilberto Morales & Rafael Predebon 📅 03.06.24
 
 ## 1️⃣ Qual o papel do SQL em SGBD?
 
@@ -12,4 +12,5 @@
 #### Restrições de not null: Impedem que valores nulos sejam inseridos em determinadas colunas, garantindo que essas colunas sempre tenham dados válidos.
 #### Restrições de check: Permitem que os desenvolvedores especifiquem condições específicas que os valores em uma coluna devem atender, garantindo a validade dos dados inseridos.
 
-## 3️⃣ Arquivo: [📂 comic.sql](https://github.com/eumorales/trabalhobd/blob/main/comic.sql)
+## 3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟 Arquivo: [📂 comic.sql](https://github.com/eumorales/trabalhobd/blob/main/comic.sql)
+
