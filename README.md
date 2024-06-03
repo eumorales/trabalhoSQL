@@ -56,3 +56,23 @@ INSERT INTO Projeto (id, titulo, resumo, professor_responsavel_id, colaborador_i
 (2,"SirPerf","Sistema de perfusão",1,3,10),
 (3,"OdontoTren","Sistema de gestão de atendimento",2,3,20),
 (4,"Avida","Sistema de acompanhamento psiquiátrico",1,NULL,10);
+
+SELECT Projeto.titulo 
+FROM Projeto 
+JOIN Instituicao ON Projeto.instituicao_id = Instituicao.id 
+WHERE Instituicao.sigla = 'UFN';
+
+SELECT Professor.nome 
+FROM Professor 
+LEFT JOIN Projeto ON Professor.id = Projeto.professor_responsavel_id 
+WHERE Projeto.id IS NULL;
+
+SELECT Projeto.titulo 
+FROM Projeto 
+JOIN Professor ON Projeto.professor_responsavel_id = Professor.id 
+WHERE Professor.nome = 'Alexandre Zamberlan';
+
+SELECT COUNT(*) AS total_projetos 
+FROM Projeto;
+
+5. 
