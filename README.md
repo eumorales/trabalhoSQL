@@ -1,4 +1,4 @@
-# 03.06.24 - Gilberto e Rafael
+# BD
 
 CREATE DATABASE trabalho;
 USE trabalho;
@@ -57,37 +57,14 @@ INSERT INTO Projeto (id, titulo, resumo, professor_responsavel_id, colaborador_i
 (3,"OdontoTren","Sistema de gestão de atendimento",2,3,20),
 (4,"Avida","Sistema de acompanhamento psiquiátrico",1,NULL,10);
 
-SELECT Projeto.titulo 
-FROM Projeto 
-JOIN Instituicao ON Projeto.instituicao_id = Instituicao.id 
-WHERE Instituicao.sigla = 'UFN';
+# Scripts
 
-SELECT Professor.nome 
-FROM Professor 
-LEFT JOIN Projeto ON Professor.id = Projeto.professor_responsavel_id 
-WHERE Projeto.id IS NULL;
+USE comic;
 
-SELECT Projeto.titulo 
-FROM Projeto 
-JOIN Professor ON Projeto.professor_responsavel_id = Professor.id 
-WHERE Professor.nome = 'Alexandre Zamberlan';
-
-SELECT COUNT(*) AS total_projetos 
-FROM Projeto;
-
-SELECT titulo 
-FROM Projeto 
-WHERE colaborador_id IS NULL;
-
-SELECT Projeto.titulo 
-FROM Projeto 
-JOIN Professor ON Projeto.professor_responsavel_id = Professor.id 
-JOIN Curso ON Professor.curso_id = Curso.id 
-WHERE Curso.area = 'Tecnologia';
-
-SELECT Curso.nome AS curso, Projeto.titulo 
-FROM Projeto 
-JOIN Professor ON Projeto.professor_responsavel_id = Professor.id 
-JOIN Curso ON Professor.curso_id = Curso.id 
-ORDER BY Curso.nome;
-
+SELECT Projeto.titulo FROM Projeto JOIN Instituicao ON Projeto.instituicao_id = Instituicao.id WHERE Instituicao.sigla = 'UFN';
+SELECT Professor.nome FROM Professor LEFT JOIN Projeto ON Professor.id = Projeto.professor_responsavel_id WHERE Projeto.id IS NULL;
+SELECT Projeto.titulo FROM Projeto JOIN Professor ON Projeto.professor_responsavel_id = Professor.id WHERE Professor.nome = 'Alexandre Zamberlan';
+SELECT COUNT(*) AS total_projetos FROM Projeto;
+SELECT titulo FROM Projeto WHERE colaborador_id IS NULL;
+SELECT Projeto.titulo FROM Projeto JOIN Professor ON Projeto.professor_responsavel_id = Professor.id JOIN Curso ON Professor.curso_id = Curso.id WHERE Curso.area = 'Tecnologia';
+SELECT Curso.nome AS curso, Projeto.titulo FROM Projeto JOIN Professor ON Projeto.professor_responsavel_id = Professor.id JOIN Curso ON Professor.curso_id = Curso.id ORDER BY Curso.nome;
