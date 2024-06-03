@@ -1,4 +1,4 @@
-# 📘 Trabalho - Gilberto Morales & Rafael Predebon 📅 03.06.24
+# 📘 Trabalho - Gilberto Morales & Rafael Predebon
 
 ## 1️⃣ Qual o papel do SQL em SGBD?
 
